@@ -3,8 +3,11 @@ import datetime
 from league_info.league_info import retrieve_data, retrieve_league
 
 
-def initalise_streamlit():
-    
+def initalise_streamlit() -> None:
+    """
+    Initalises the Streamlit application with the required configurations
+    :return: None
+    """
     st.set_page_config(layout='wide')
 
     st.sidebar.image("https://static-00.iconduck.com/assets.00/soccer-ball-emoji-2048x2048-o1qymrda.png", width=100)
@@ -14,7 +17,11 @@ def initalise_streamlit():
 
 
 def main():
-    
+    """
+    Houses the logic of the football app, handing the input from the select box and passing it to logic functions in
+    league_info.py
+    :return: None
+    """
     today = datetime.datetime.today()
     current_year = today.year
 
